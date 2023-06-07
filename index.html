@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/Captura2.PNG">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/principal.css">
+    <title>WatchVerse || Mira tus series y peliculas favoritas</title>
+</head>
+
+<body>
+    <!--AQUI EMPIEZA EL NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/Captura5.JPG" alt="WatchVerse" width="100" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peliculas-series-sugeridas">Peliculas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peliculas-series-sugeridas">Series</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categorias-principal" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/pages/error404.html">Accion</a></li>
+                            <li><a class="dropdown-item" href="/pages/comedia.html">Comedia</a></li>
+                            <li><a class="dropdown-item" href="/pages/terror.html">Terror</a></li>
+                            <li><a class="dropdown-item" href="/pages/error404.html">Romance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-5" role="search">
+                    <input class="form-control me-1" type="search" placeholder="Pelicula o serie..."
+                        aria-label="Search">
+                    <a class="btn btn-outline-light" type="submit" href="./pages/error404.html">Buscar</a>
+                </form>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    class="btn btn-dark m-1 btn-navbar btn-outline-light">Ingresar</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#registrateModal"
+                    class="btn btn-dark btn-navbar btn-outline-light">Registrarse</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal registro -->
+    <div class="modal fade" id="registrateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="./pages/error404.html">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required minlength="10" maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Confirmar contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Fecha de nacimiento
+                        <input type="date" class="form-control" placeholder="Fecha de nacimiento" required
+                            min="2005-01-01">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./pages/error404.html"><button class="btn btn-dark btn-outline-gray"
+                                type="submit">Registrarse</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Logueate</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="./pages/error404.html">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required maxlength="10">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-dark btn-outline-gray">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--AQUI TERMINA EL NAVBAR-->
+
+    <!-- Foto/video principal -->
+    <header>
+        <div class="card text-bg-dark video-principal">
+            <video class="video-principal2" autoplay muted loop
+                src="/assets/y2mate.com - Duna Parte Dos  Tráiler Oficial_1080p.mp4"></video>
+            <div class="card-img-overlay mt-5 container-fluid">
+                <h1 class="card-title h1-principal col-xxl-10 col-xl-10 col-lg-12 col-md-8 col-sm-7">PELICULAS
+                    Y SERIES ILIMITADAS.</h1>
+                <p class="card-text texto-video-principal mt-5 col-sm-6 col-xs-6">Disfruta cuando quieras, todo en un
+                    mismo lugar.</p>
+                <a class="btn btn-dark btn-lg btn-outline-light mt-4 py-3 col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-4 btn-susc-video-principal"
+                    href="#suscripcion-principal" role="button">SUSCRÍBETE AHORA</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Peliculas sugeridas -->
+    <section>
+        <div class="card text-bg-dark" id="peliculas-series-sugeridas">
+            <img src="assets/img-pelis.jpg" class="card-img img-fondo-sugeridas"
+                alt="imagen de fondo de la seccion de peliculas sugeridas">
+            <div class="card-img-overlay">
+                <h2 class="card-title titulo-pelis-sugeridas mt-3">ELEGI TU PELI O SERIE FAVORITA.</h2>
+                <div id="carouselSugeridas" class="carousel slide mt-5">
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselSugeridas"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <div class="carousel-inner carrusel-pelis-sugeridas container">
+                        <div class="carousel-item active container carrusel-sugeridas1">
+                            <div class="row d-flex justify-content-center mx-1">
+                                <a href="/pages/westworld1x1.html"
+                                    class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="/assets/westworld.poster.2 (Copiar).jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster westworld"></a>
+                                <a href="./pages/error404.html"
+                                    class="segundo-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/encanto-246546841-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster encanto"></a>
+                                <a href="./pages/error404.html"
+                                    class="tercer-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/knock_at_the_cabin-261379789-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster knock at the cabin"></a>
+                                <a href="./pages/error404.html"
+                                    class="cuarto-cont-img-carrusel col-xxl-3 col-xl-4 col-lg-4 cont-img-carrusel-sugeridas"><img
+                                        src="/assets/el gerente.jpg" class=" p-3 img-carrusel-sugeridas"
+                                        alt="poster el gerente"></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item container carrusel-sugeridas1">
+                            <div class="row d-flex justify-content-center mx-1">
+                                <a href="/pages/supermariobros.html"
+                                    class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster mario bros"></a>
+                                <a href="./pages/error404.html"
+                                    class="segundo-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="/assets/nirvana.jpg" class=" p-3 img-carrusel-sugeridas"
+                                        alt="poster nirvana"></a>
+                                <a href="./pages/error404.html"
+                                    class="tercer-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/puss_in_boots_the_last_wish-897078202-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster el gato con botas"></a>
+                                <a href="./pages/error404.html"
+                                    class="cuarto-cont-img-carrusel col-xxl-3 col-xl-4 col-lg-4 cont-img-carrusel-sugeridas"><img
+                                        src="./assets/Chuky.jpg" class=" p-3 img-carrusel-sugeridas"
+                                        alt="poster chuky"></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item container carrusel-sugeridas1">
+                            <div class="row d-flex justify-content-center mx-1">
+                                <a href="./pages/error404.html"
+                                    class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/shazam_fury_of_the_gods-942384944-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster shazam"></a>
+                                <a href="./pages/error404.html"
+                                    class="segundo-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-5 cont-img-carrusel-sugeridas"><img
+                                        src="/assets/yellowstone.jpg" class=" p-3 img-carrusel-sugeridas"
+                                        alt="poster yellowstone"></a>
+                                <a href="./pages/error404.html"
+                                    class="tercer-cont-img-carrusel col-xxl-3 col-xl-3 col-lg-4 col-md-4 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/ant_man_and_the_wasp_quantumania-332452493-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster ant-man"></a>
+                                <a href="./pages/error404.html"
+                                    class="cuarto-cont-img-carrusel col-xxl-3 col-xl-4 col-lg-4 cont-img-carrusel-sugeridas"><img
+                                        src="https://pics.filmaffinity.com/winnie_the_pooh_blood_and_honey-717024128-large.jpg"
+                                        class=" p-3 img-carrusel-sugeridas" alt="poster winnie the pooh"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselSugeridas"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="intermedio"></div>
+
+    <!-- Suscripcion -->
+    <section>
+        <div class="card text-bg-dark" id="suscripcion-principal">
+            <img src="/assets/img-suscripcion.jpg" class="card-img img-fondo-suscripciones"
+                alt="imagen de fondo de la seccion de suscripciones">
+            <div class="card-img-overlay banner-suscripciones container">
+                <h2
+                    class="card-title text-center titulo-suscripciones col-xxl-5 col-xl-7 col-lg-6 col-md-8 col-sm-10 col-xs-8">
+                    ELIGE TU PLAN</h2>
+                <p class="card-text text-center texto-suscripciones">Podes cancelar en cualquier momento.</p>
+                <div class="container d-flex justify-content-evenly">
+                    <a class="btn btn-dark btn-lg btn-outline-light mt-4 py-3 col-3 btn-susc" href="#"
+                        data-bs-toggle="modal" data-bs-target="#registrateModal" role="button">$699 X
+                        MES</a>
+                    <a class="btn btn-dark btn-lg btn-outline-light mt-4 py-3 col-3 btn-susc" href="#"
+                        data-bs-toggle="modal" data-bs-target="#registrateModal" role="button">$1.899
+                        X 3 MESES</a>
+                    <a class="btn btn-dark btn-lg btn-outline-light mt-4 py-3 col-3 btn-susc" href="#"
+                        data-bs-toggle="modal" data-bs-target="#registrateModal" role="button">$5.999
+                        X 12 MESES</a>
+                </div>
+                <p class="card-text text-center mt-4"><small class="texto-inferior-suscripciones">*Requiere pago
+                        anticipado. Ahorro basado en el precio del
+                        plan
+                        estándar anual comparado con el precio del plan estándar mensual por 12 meses, excluyendo
+                        impuestos.
+                        Aplican términos.
+                    </small></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="intermedio"></div>
+
+    <!-- categorias -->
+    <div class="card text-bg-dark" id="categorias-principal">
+        <img src="/assets/imgcategorias.jpg" class="card-img img-fondo-categorias"
+            alt="imagen de fondo de la seccion de categorias de peliculas/series">
+        <div class="card-img-overlay">
+            <h2 class="card-title titulo-categorias my-4">CATEGORIAS</h2>
+            <div class="container-fluid">
+                <div class="row galeria-categorias">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-3 contenedor-categoria">
+                        <a href="/pages/terror.html"
+                            class="btn btn-dark btn-outline-light my-1 col-xxl-7 col-xl-8 col-lg-9 col-md-6 col-sm-7 col-12 btn-categoria">TERROR</a>
+                        <a href="/pages/terror.html"><img class="img-categoria"
+                                src="/assets/scream-vi-66919-poster-200x300.jpg" alt="poster de categoria terror"></a>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-3 contenedor-categoria">
+                        <a href="/pages/comedia.html"
+                            class="btn btn-dark btn-outline-light my-1 col-xxl-7 col-xl-8 col-lg-9 col-md-6 col-sm-7 col-12 btn-categoria">COMEDIA</a>
+                        <a href="/pages/comedia.html"><img class="img-categoria"
+                                src="/assets/champions-67329-poster-200x300.jpg" alt="poster de categoria comedia"></a>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-3 contenedor-categoria">
+                        <a href="/pages/error404.html"
+                            class="btn btn-dark btn-outline-light my-1 col-xxl-7 col-xl-8 col-lg-9 col-md-6 col-sm-7 col-12 btn-categoria">ACCIÓN</a>
+                        <a href="/pages/error404.html"><img class="img-categoria"
+                                src="/assets/guy-ritchies-the-covenant-67748-poster-200x300.jpg"
+                                alt="poster de categoria acción"></a>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-3 contenedor-categoria">
+                        <a href="/pages/error404.html"
+                            class="btn btn-dark btn-outline-light my-1 col-xxl-7 col-xl-8 col-lg-9 col-md-6 col-sm-7 col-12 btn-categoria">ROMANCE</a>
+                        <a href="./pages/error404.html"><img class="img-categoria"
+                                src="/assets/the-hating-game-54533-poster-200x300.jpg"
+                                alt="poster de categoria romance"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intermedio"></div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-light links-footer">
+                <div class="col-md-4 col-sm-12">
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="./pages/error404.html">
+                        <p>Mapa del sitio</p>
+                    </a>
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="./pages/error404.html">
+                        <p>Terminos y condiciones de uso</p>
+                    </a>
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="./pages/error404.html">
+                        <p>Aviso de privacidad</p>
+                    </a>
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="./pages/error404.html">
+                        <p>Sobre WatchVerse</p>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h5>SEGUINOS</h5>
+                    <a href="https://www.facebook.com/RollingCodeSchool" target="en_blank"><img
+                            src="/assets/facebook.png" alt="icono facebook" width="50" height="50"></a>
+                    <a href="https://www.instagram.com/rollingcodeschool/" target="en_blank"><img
+                            src="/assets/instagram.png" alt="icono instagram" width="50" height="50"></a>
+                    <a href="https://twitter.com/rollingcodeok" target="en_blank"><img src="/assets/tw.png"
+                            alt="icono twitter" width="60" height="60"></a>
+                    <a href="https://www.linkedin.com/company/rollingcode/" target="en_blank"><img
+                            src="/assets/ICONO-LINKEDIN.png" alt="icono Linkedin" width="60" height="60"></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="/pages/sobrenosotros.html">
+                        <p>Acerca de nosotros</p>
+                    </a>
+                    <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                        href="/pages/contacto.html">
+                        <p>¿Consultas? ¡Contactanos!</p>
+                    </a>
+                    <div>
+                        <a href="#"><img class="m-1" src="/assets/Captura3.JPG" alt="logo WatchVerse" width="200"
+                                height="100"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

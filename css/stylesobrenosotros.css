@@ -1,0 +1,49 @@
+
+.title{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 20px;
+  margin: 80px 0 0 0;
+}
+.navbar{
+  position: fixed !important;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 3px 3px 0px #36b2f07d;
+}
+
+.img-1{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+
+}
+.divimagen{
+
+justify-content: center;
+}
+.body{
+  background: rgb(1,24,98);
+background: radial-gradient(circle, rgba(1,24,98,1) 0%, rgba(0,0,0,1) 100%);
+}
+.title{
+  color: white;
+}
+.text{
+  color: white;
+  padding: 25px 0px 10px 0px;
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+
+}
+.text1{
+  color: white;
+  padding: 2rem;
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+
+}

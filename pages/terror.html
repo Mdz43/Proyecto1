@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo-categorias.css">
+    <link rel="shortcut icon" href="/assets/Captura2.PNG">
+    <title>WatchVerse || Mira tus series y peliculas favoritas</title>
+</head>
+
+<body>
+    <!--AQUI EMPIEZA EL NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/Captura5.JPG" alt="WatchVerse" width="100" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#peliculas-series-sugeridas">Peliculas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#peliculas-series-sugeridas">Series</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categorias-principal" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/pages/error404.html">Accion</a></li>
+                            <li><a class="dropdown-item" href="/pages/comedia.html">Comedia</a></li>
+                            <li><a class="dropdown-item" href="/pages/terror.html">Terror</a></li>
+                            <li><a class="dropdown-item" href="/pages/error404.html">Romance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-5" role="search">
+                    <input class="form-control me-1" type="search" placeholder="Pelicula o serie..."
+                        aria-label="Search">
+                    <a class="btn btn-outline-light" type="submit" href="../pages/error404.html">Buscar</a>
+                </form>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    class="btn btn-dark m-1 btn-navbar btn-outline-light">Ingresar</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#registrateModal"
+                    class="btn btn-dark btn-navbar btn-outline-light">Registrarse</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal registro -->
+    <div class="modal fade" id="registrateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required minlength="10" maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Confirmar contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Fecha de nacimiento
+                        <input type="date" class="form-control" placeholder="Fecha de nacimiento" required required
+                            min="2005-01-01">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-dark btn-outline-gray" type="submit"
+                            href="../pages/error404.html">Registrarse</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Logueate</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required maxlength="10">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="../pages/error404.html" type="submit" class="btn btn-dark btn-outline-gray">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/Captura5.JPG" alt="WatchVerse" width="100" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peliculas-series-sugeridas">Peliculas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peliculas-series-sugeridas">Series</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categorias-principal" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../pages/error404.html">Accion</a></li>
+                            <li><a class="dropdown-item" href="../pages/comedia.html">Comedia</a></li>
+                            <li><a class="dropdown-item" href="../pages/terror.html">Terror</a></li>
+                            <li><a class="dropdown-item" href="../pages/error404.html">Romance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-5" role="search">
+                    <input class="form-control me-1" type="search" placeholder="Pelicula o serie..."
+                        aria-label="Search">
+                    <a class="btn btn-outline-light" type="submit" href="../pages/error404.html">Buscar</a>
+                </form>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    class="btn btn-dark m-1 btn-navbar btn-outline-light">Ingresar</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#registrateModal"
+                    class="btn btn-dark btn-navbar btn-outline-light">Registrarse</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal registro -->
+    <div class="modal fade" id="registrateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required minlength="10" maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Confirmar contraseña
+                        <input type="password" class="form-control" placeholder="" required minlength="5"
+                            maxlength="10">
+                    </div>
+                    <div class="modal-body"> Fecha de nacimiento
+                        <input type="date" class="form-control" placeholder="Fecha de nacimiento" required required
+                            min="2005-01-01">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-dark btn-outline-gray" type="submit"
+                            href="../pages/error404.html">Registrarse</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Logueate</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+
+                    <div class="modal-body"> Email
+                        <input type="email" class="form-control" placeholder="" required maxlength="35">
+                    </div>
+                    <div class="modal-body"> Contraseña
+                        <input type="password" class="form-control" placeholder="" required maxlength="10">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="../pages/error404.html" type="submit" class="btn btn-dark btn-outline-gray">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--AQUI TERMINA EL NAVBAR-->
+
+
+    <main>
+        <div class="div-0">
+            <div>
+                <h2>Terror</h2>
+            </div>
+            <div class="div-grid-1">
+                <div class="div-grid-2">
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/the_pope_s_exorcist-660382735-large.jpg" alt="">
+                            <p>El Exorcista del Papa</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/the_witches-245454819-large.jpg" alt="">
+                            <p>Las Brujas</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/halloween_kills-724676037-large.jpg" alt="">
+                            <p>Halloween Kills</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/knock_at_the_cabin-261379789-large.jpg" alt="">
+                            <p>Llaman a la puerta</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/train_to_busan_2-380742038-large.jpg" alt="">
+                            <p>Península</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/m3gan-570441440-large.jpg" alt="">
+                            <p>M3GAN</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/the_forever_purge-594164206-large.jpg" alt="">
+                            <p>La Purga: Infinita</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/evil_dead_rise-438707144-large.jpg" alt="">
+                            <p>Posesión Infernal: El Despertar</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/scream_vi-826495425-large.jpg" alt="">
+                            <p>Scream VI</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/winnie_the_pooh_blood_and_honey-717024128-large.jpg"
+                                alt="">
+                            <p>Winnie the Pooh: Blood and Honey</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/the_owners-878347869-large.jpg" alt="">
+                            <p>The Owners</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2//84MBYqjgfY1CBpxAulF9MdIe6E4.jpg"
+                                alt="">
+                            <p>Peur Bleue 3</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/scream-569724366-large.jpg" alt="">
+                            <p>Scream</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/unicorn_wars-146899499-large.jpg" alt="">
+                            <p>Unicorn Wars</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2//jZaug9eRUbYFT1PKWwD4CDRe8gO.jpg"
+                                alt="">
+                            <p>Devil's Light: l'emprise du diable</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/terrifier_2-139025282-large.jpg" alt="">
+                            <p>Terrfier 2</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/candyman-344523759-large.jpg" alt="">
+                            <p>Candyman</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/becky-165212564-large.jpg" alt="">
+                            <p>Becky</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/tribal_get_out_alive-954692490-large.jpg" alt="">
+                            <p>Tribal: Get Out Alive</p>
+                        </a>
+                    </div>
+                    <div class="tarjeta-peliculas">
+                        <a href="./error404.html">
+                            <img src="https://pics.filmaffinity.com/antebellum-927445501-large.jpg" alt="">
+                            <p>Antebellum</p>
+                        </a>
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <h5>A-Z</h5>
+                    <div class="az-lista">
+                        <a href="">#</a>
+                        <a href="">A</a>
+                        <a href="">B</a>
+                        <a href="">C</a>
+                        <a href="">D</a>
+                        <a href="">E</a>
+                        <a href="">F</a>
+                        <a href="">G</a>
+                        <a href="">H</a>
+                        <a href="">I</a>
+                        <a href="">J</a>
+                        <a href="">K</a>
+                        <a href="">L</a>
+                        <a href="">M</a>
+                        <a href="">N</a>
+                        <a href="">Ñ</a>
+                        <a href="">O</a>
+                        <a href="">P</a>
+                        <a href="">Q</a>
+                        <a href="">R</a>
+                        <a href="">S</a>
+                        <a href="">T</a>
+                        <a href="">U</a>
+                        <a href="">V</a>
+                        <a href="">W</a>
+                        <a href="">X</a>
+                        <a href="">Y</a>
+                        <a href="">Z</a>
+                    </div>
+                    <div>
+                        <div class="div-estrenos-1">
+                            <h6>ESTRENOS</h6>
+                            <div class="div-estrenos-2">
+                                <a href="./supermariobros.html">
+                                    <div class="Image">
+                                        <img src="https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="Title">Super Mario Bros: La película</div>
+                                </a>
+                            </div>
+                            <div class="div-estrenos-2">
+                                <a href="./error404.html">
+                                    <div class="Image">
+                                        <img src="https://pics.filmaffinity.com/venom_let_there_be_carnage-352790832-large.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="Title">Venom: Carnage liberado</div>
+                                </a>
+                            </div>
+                            <div class="div-estrenos-2">
+                                <a href="./error404.html">
+                                    <div class="Image">
+                                        <img src="https://pics.filmaffinity.com/encanto-246546841-large.jpg" alt="">
+                                    </div>
+                                    <div class="Title">Encanto</div>
+                                </a>
+                            </div>
+                            <div class="div-estrenos-2">
+                                <a href="./error404.html">
+                                    <div class="Image">
+                                        <img src="https://pics.filmaffinity.com/shang_chi_and_the_legend_of_the_ten_rings-111813706-large.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="Title">Shang-Chi y la leyenda de los diez anillos</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <footer class="footer">
+            <div class="container">
+                <div class="row text-light links-footer">
+                    <div class="col-md-4 col-sm-12">
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="../pages/error404.html">
+                            <p>Mapa del sitio</p>
+                        </a>
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="../pages/error404.html">
+                            <p>Terminos y condiciones de uso</p>
+                        </a>
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="../pages/error404.html">
+                            <p>Aviso de privacidad</p>
+                        </a>
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="../pages/error404.html">
+                            <p>Sobre WatchVerse</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <h5>SEGUINOS</h5>
+                        <a href="https://www.facebook.com/RollingCodeSchool" target="en_blank"><img
+                                src="/assets/facebook.png" alt="icono facebook" width="50" height="50"></a>
+                        <a href="https://www.instagram.com/rollingcodeschool/" target="en_blank"><img
+                                src="/assets/instagram.png" alt="icono instagram" width="50" height="50"></a>
+                        <a href="https://twitter.com/rollingcodeok" target="en_blank"><img src="/assets/tw.png"
+                                alt="icono twitter" width="60" height="60"></a>
+                        <a href="https://www.linkedin.com/company/rollingcode/" target="en_blank"><img
+                                src="/assets/ICONO-LINKEDIN.png" alt="icono Linkedin" width="60" height="60"></a>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="/pages/sobrenosotros.html">
+                            <p>Acerca de nosotros</p>
+                        </a>
+                        <a class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                            href="/pages/contacto.html">
+                            <p>¿Consultas? ¡Contactanos!</p>
+                        </a>
+                        <div>
+                            <a href="#"><img class="m-1" src="/assets/Captura3.JPG" alt="logo WatchVerse" width="200"
+                                    height="100"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Optional Javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.navbar{
+    box-shadow: 0px 3px 3px 0px #36b2f07d;
+  }
+.main-content{
+    background: rgb(1,24,98);
+    background: radial-gradient(circle, rgba(1,24,98,1) 0%, rgba(0,0,0,1) 100%);    
+    color: white;
+    padding: 0px 10px ;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    }
+    .content{
+        padding: 15px 50px;
+    }
+    .titulo{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .formulario{
+        box-shadow: 0 0 10px 0;
+        
+       
+    }
+    .formulariodecontacto{
+        background-color: #222222;
+        padding:  1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form{
+      margin-right: 10px;
+    }
+    .moreinfo{
+        margin: 0;
+    }
+    .formulariodecontacto form button,
+    .formulariodecontacto form input,
+    .formulariodecontacto form textarea{
+        width: 100%;
+        padding: 5px;
+        border: none;
+        background: none;
+        outline: none;
+        border-bottom: 1px solid white;
+        color: #ffff;
+    
+    }
+    .send{
+    
+        margin-left: 5px;
+    }
+    .informaciondecontacto{
+        padding: 1rem;
+        
+
+    }
+    textarea{
+        resize: none;
+    }
+    hr{
+        margin: 0px;
+    }

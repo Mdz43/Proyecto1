@@ -1,0 +1,130 @@
+body{
+    background-color: #080f28;
+}
+.navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 3px 3px 0px #36b2f07d;
+}
+main{
+    color: #fff;
+}
+.div-0{
+    margin: 95px 50px 50px 50px;
+}
+.div-grid-1{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.div-grid-2{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+.tarjeta-peliculas{
+    padding: 5px;
+    text-align: center;
+
+}
+.tarjeta-peliculas a{
+    text-decoration: none;
+}
+.tarjeta-peliculas p{
+    color: #fff;
+}
+
+.tarjeta-peliculas img{
+    width: auto;
+    height: 300px;
+}
+.sidebar{
+    text-align: center;
+}
+.sidebar h5{
+    color: #4f6b95;
+    background: #141a32;
+    padding: 10px 10px;
+}
+.az-lista{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.az-lista a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em;
+    background: #1e2747;
+    border-radius: 5px;
+}
+.div-estrenos-1 h6{
+    background: #141a32;
+    color: #4f6b95;
+    padding: 10px 10px;
+    margin: 10px auto;
+}
+.div-estrenos-2{
+    margin: 30px 0px;
+}
+.div-estrenos-2 a{
+    display:flex;
+    color: #fff;
+    text-decoration: none;
+}
+.Title{
+    padding: 0px 30px;
+    height: 40%;
+}
+.div-estrenos-2 img{
+    width: 5em;
+    height: auto;
+
+}
+.az-lista a:hover{
+    opacity: 0.8;
+    color: #4f6b95;
+}
+.tarjeta-peliculas:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.div-estrenos-2 a:hover{
+    color:#007bff ;
+}
+@media screen and (max-width:1470px ) {
+    .div-grid-2{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media screen and (max-width:1210px ) {
+    .div-grid-2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media screen and (max-width:920px) {
+    .div-grid-2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    .div-grid-1{
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (max-width:576px) {
+    .div-grid-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .div-grid-1{
+        grid-template-columns: 100%;
+    }
+}

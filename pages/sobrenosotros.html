@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/assets/Captura2.PNG">
+  <title>WatchVerse || Mira tus series y peliculas favoritas</title>
+  <link rel="stylesheet" href="/css/stylesobrenosotros.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Wix+Madefor+Display&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="body">
+  <!--AQUI EMPIEZA EL NAVBAR-->
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">
+        <img src="/assets/Captura5.JPG" alt="WatchVerse" width="100" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html#peliculas-series-sugeridas">Peliculas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html#peliculas-series-sugeridas">Series</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#categorias-principal" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../pages/error404.html">Accion</a></li>
+              <li><a class="dropdown-item" href="../pages/comedia.html">Comedia</a></li>
+              <li><a class="dropdown-item" href="../pages/terror.html">Terror</a></li>
+              <li><a class="dropdown-item" href="../pages/error404.html">Romance</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-5" role="search">
+          <input class="form-control me-1" type="search" placeholder="Pelicula o serie..." aria-label="Search">
+          <a class="btn btn-outline-light" type="submit" href="../pages/error404.html">Buscar</a>
+        </form>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+          class="btn btn-dark m-1 btn-navbar btn-outline-light">Ingresar</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#registrateModal"
+          class="btn btn-dark btn-navbar btn-outline-light">Registrarse</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Modal registro -->
+  <div class="modal fade" id="registrateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="post">
+
+          <div class="modal-body"> Email
+            <input type="email" class="form-control" placeholder="" required minlength="10" maxlength="35">
+          </div>
+          <div class="modal-body"> Contraseña
+            <input type="password" class="form-control" placeholder="" required minlength="5" maxlength="10">
+          </div>
+          <div class="modal-body"> Confirmar contraseña
+            <input type="password" class="form-control" placeholder="" required minlength="5" maxlength="10">
+          </div>
+          <div class="modal-body"> Fecha de nacimiento
+            <input type="date" class="form-control" placeholder="Fecha de nacimiento" required required
+              min="2005-01-01">
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-dark btn-outline-gray" type="submit" href="../pages/error404.html">Registrarse</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Logueate</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="post">
+          <div class="modal-body"> Email
+            <input type="email" class="form-control" placeholder="" required maxlength="35">
+          </div>
+          <div class="modal-body"> Contraseña
+            <input type="password" class="form-control" placeholder="" required maxlength="10">
+          </div>
+          <div class="modal-footer">
+            <a href="../pages/error404.html" type="submit" class="btn btn-dark btn-outline-gray">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--AQUI TERMINA EL NAVBAR-->
+
+
+  <!--TITULO-->
+  <h1 class="title">Sobre nosotros</h1>
+  <section class="container">
+
+
+    <!--TEXTO-->
+
+    <h4 class="text1 text-center">
+      Somos un equipo de 6 personas que nos hemos unido para crear esta
+      página web de películas con el objetivo de ofrecerte una experiencia
+      cinematográfica única. Hemos trabajado duro para crear una plataforma
+      sencilla y atractiva que te sumerja en el mundo del séptimo arte.
+      ¡Bienvenido a nuestra Plataforma!"
+    </h4>
+  </section>
+  <!--COMIENZAN LAS IMAGENES-->
+  <section class="container-fluid">
+    <div class="d-flex justify-content-between row text-center">
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/WhatsApp Image 2023-05-29 at 2.40.54 PM.jpeg" alt="foto augusto" class="img-1" />
+          <h4 class="text">Augusto Gabriel Canosa</h4>
+          <p class="text">Profesor de ingles y estudiante de programacion</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/IMG-20230504-WA0091.jpg" alt="foto ignacio" class="img-1" />
+          <h4 class="text">Ignacio Terrazas Lopez</h4>
+          <p class="text">Soy egresado de la Escuela Normal y actualmente soy
+            estudiante de Rolling Code.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/e3dcd6b2-bd03-44b0-bd15-5e83adf887b8.jfif" alt="foto mario" class="img-1" />
+          <h4 class="text">Mario Matias Moussa</h4>
+          <p class="text">Tucumano, 21 años de edad, actualmente alumno de rollingcode</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/WhatsApp Image 2023-05-29 at 2.38.34 PM.jpeg" alt="foto lautaro" class="img-1" />
+          <h4 class="text">Lautaro Miranda</h4>
+          <p class="text">23 años, trabajo en McDonalds, Me gusta usar la pc, jugar etc y quiero cambiar de
+            rumbo laboral cursando programacion.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/WhatsApp Image 2023-05-29 at 6.29.24 PM.jpeg" alt="foto lucas" class="img-1" />
+          <h4 class="text">Lucas D´mayo</h4>
+          <p class="text">Hola, mi nombre es luquitas y me dicen lucas, tengo 27 años y antes de bailar en los
+            wachiturros trabajaba de delivery en una sangucheria de la vuelta de mi casa</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 my-5">
+        <div>
+          <img src="/assets/WhatsApp Image 2023-05-29 at 8.17.11 PM.jpeg" alt="foto gustavo" class="img-1" />
+          <h4 class="text">Gustavo Pieroni</h4>
+          <p class="text">Soy Gustavo Pieroni. Soy odontologo y estudiante de posgrado en implantes. Con
+            intereses variados. Carpintero y artesano por hobbie. Hablo inglés y estoy aprendiendo italiano
+            y programación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
